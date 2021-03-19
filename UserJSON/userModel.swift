@@ -2,7 +2,6 @@ import SwiftUI
 
 struct User: Codable, Identifiable {
     let id = UUID()
-    let username: String
     let name: String
     var document: Document
 }
@@ -10,16 +9,16 @@ struct User: Codable, Identifiable {
 struct Document: Codable, Identifiable {
     let id = UUID()
     var count: Int
-    var profiles: [Profile]
+    var profiles: [Profiles]
 }
 
-struct Profile: Codable {
+struct Profiles: Codable {
     let id = UUID()
     var name, email: String
-    var item: [Item]
+    var items: [Items]
 }
 
-struct Item: Codable {
+struct Items: Codable {
     var name, email: String
 }
 

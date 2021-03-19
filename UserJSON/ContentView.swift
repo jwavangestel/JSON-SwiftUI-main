@@ -1,24 +1,23 @@
 import SwiftUI
 struct ContentView: View {
     
-    @State var users: [User] = []
+    @State var themas: [User] = []
 
     var body: some View {
-        List(users) { user in
+        List(themas) { thema in
           
             VStack {
-            Text(user.name)
-            Text(user.document.profiles[0].name)
-            Text(user.document.profiles[0].item[0].name)
-            Text(user.document.profiles[0].item[0].email)
-            Text(user.document.profiles[0].item[1].name)
-            Text(user.document.profiles[0].item[1].email)
+                Text(thema.name)
+                Text(thema.document.profiles[0].name)
+                Text(thema.document.profiles[0].items[0].name)
+                Text(thema.document.profiles[0].items[1].name)
+  
         }
 
         }
             .onAppear {
                 apiCall().getUsers { (users) in
-                    self.users = users
+                    self.themas = users
                 }
             }
     }
