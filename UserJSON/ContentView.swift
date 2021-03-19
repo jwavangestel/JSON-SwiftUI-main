@@ -10,8 +10,9 @@ struct ContentView: View {
                 Text(thema.name)
                 Text(thema.subthemas.subthema[0].name)
                 Text(thema.subthemas.subthema[0].items[0].name)
-                Text(thema.subthemas.subthema[0].items[0].item)
+                Text(thema.subthemas.subthema[0].items[0].item[0].desc)
                 Text(thema.subthemas.subthema[0].items[1].name)
+                Text(thema.subthemas.subthema[0].items[1].item[0].desc)
         }
 
         }

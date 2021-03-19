@@ -19,7 +19,11 @@ struct Profiles: Codable {
 }
 
 struct Items: Codable {
+    let id = UUID()
     var name: String
-    var item: String
+    var item: [Item]
+}
+struct Item: Codable {
+    var desc: String
 }
 
