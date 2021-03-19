@@ -8,10 +8,10 @@ struct ContentView: View {
           
             VStack {
                 Text(thema.name)
-                Text(thema.document.profiles[0].name)
-                Text(thema.document.profiles[0].items[0].name)
-                Text(thema.document.profiles[0].items[1].name)
-  
+                Text(thema.subthemas.subthema[0].name)
+                Text(thema.subthemas.subthema[0].items[0].name)
+                Text(thema.subthemas.subthema[0].items[0].item)
+                Text(thema.subthemas.subthema[0].items[1].name)
         }
 
         }
